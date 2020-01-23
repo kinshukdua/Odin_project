@@ -7,7 +7,7 @@
   position: relative;
   top: 5px;
   width: 50px;
-  animation: pulse 1s ease infinite;
+  animation: pulse 1.5s ease infinite;
 }
 
 @keyframes pulse {
@@ -27,11 +27,24 @@
         background-color: black;
     }
     h1 span {
+        animation: fly-in 160ms ease-in;
         padding-right: 10px;
         padding-left: 10px;
         border-radius: 6px;
-        box-shadow: 0px 0px 10px 4px #b967ff, 0px 0px 1px 0px white;
+        box-shadow: 8px 6px 0px 0px #05ffa1;
         background-color: #b967ff;
+    }
+    h1 span:hover {
+        animation: fly-out 160ms ease-out;
+        animation-fill-mode: forwards;
+        
+    }
+    @keyframes fly-in {
+        0% {box-shadow: -8px -6px 0px 0px;}
+        100% {box-shadow: 8px 6px 0px 0px #05ffa1;}
+    }
+    @keyframes fly-out {
+        100% {box-shadow: -8px -6px 0px 0px;}
     }
 </style>
 
